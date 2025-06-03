@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/constants/constants.dart';
+import 'package:flutter_application_7/pages/login.dart';
 import 'package:flutter_application_7/pages/login_page.dart';
 
 class Homepage extends StatefulWidget {
@@ -124,7 +125,7 @@ class _HomepageState extends State<Homepage> {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Loginpage(),
+                            builder: (context) => Loginpage1(),
                           ),
                         );
                       }
@@ -163,7 +164,7 @@ class pages extends StatefulWidget {
 // ignore: camel_case_types
 class _pagesState extends State<pages> {
   double _opacity = 0.0;
-  double _scale = 0.8;
+  double _scale = 0.0;
   @override
   void initState() {
     super.initState();
