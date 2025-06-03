@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/constants/constants.dart';
+import 'package:flutter_application_7/pages/login_page.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -244,14 +245,5 @@ class _pagesState extends State<pages> {
         ],
       ),
     );
-  }
-}
-
-class Loginpage extends StatelessWidget {
-  const Loginpage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
   }
 }
