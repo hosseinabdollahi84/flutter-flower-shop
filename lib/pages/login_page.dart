@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/constants/constants.dart';
+import 'package:flutter_application_7/pages/root.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -76,6 +77,31 @@ class _LoginScreenState extends State<LoginScreen> {
                             lable: 'password',
                             iconss: const Icon(Icons.password_sharp),
                           ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const RootPage(),
+                                  ));
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 300,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(178, 3, 122, 23),
+                                borderRadius: BorderRadius.circular(44),
+                              ),
+                              child: const Text(
+                                'Sign in',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     )
@@ -110,7 +136,7 @@ class _loginState extends State<login> {
   late bool _obscureText;
 
   double _opacity = 0.0;
-  double _scale = 0.0;
+
   void initState() {
     super.initState();
     setState(() {
@@ -119,7 +145,6 @@ class _loginState extends State<login> {
     Future.delayed(const Duration(milliseconds: 600), () {
       setState(() {
         _opacity = 1.0;
-        _scale = 1.0;
       });
     });
   }
