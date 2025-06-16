@@ -37,20 +37,28 @@ class _RootpageState extends State<RootPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Icon(
-              Icons.notifications,
-              color: Constants.blackColors,
-            ),
-            Text(
-              appBarTitle[bottimIndex],
-              style: TextStyle(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        automaticallyImplyLeading: false,
+        title: Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Icon(
+                Icons.notifications,
                 color: Constants.blackColors,
+                size: 27,
               ),
-            ),
-          ],
+              Text(
+                appBarTitle[bottimIndex],
+                style: TextStyle(
+                  fontFamily: "zakhim",
+                  fontSize: 24,
+                  color: Constants.blackColors,
+                ),
+              ),
+            ],
+          ),
         ),
         // backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0.0,
