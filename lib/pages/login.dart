@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/pages/login_page.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Loginpage1 extends StatelessWidget {
   Loginpage1({super.key});
@@ -26,11 +27,10 @@ class Loginpage1 extends StatelessWidget {
               child: InkWell(
                 onTap: () {
                   Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => LoginScreen(),
-                    ),
-                  );
+                      context,
+                      PageTransition(
+                          child: LoginScreen(),
+                          type: PageTransitionType.rightToLeft));
                 },
                 child: Container(
                   alignment: Alignment.center,
@@ -58,11 +58,10 @@ class Loginpage1 extends StatelessWidget {
               child: InkWell(
                 onTap: () {
                   Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => LoginScreen(),
-                    ),
-                  );
+                      context,
+                      PageTransition(
+                          child: LoginScreen(),
+                          type: PageTransitionType.rightToLeft));
                 },
                 child: const Text(
                   'Create an account',

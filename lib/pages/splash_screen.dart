@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_7/constants/constants.dart';
 import 'package:flutter_application_7/pages/login.dart';
 import 'package:flutter_application_7/pages/login_page.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -123,11 +124,10 @@ class _HomepageState extends State<Homepage> {
                         }
                       } else {
                         Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Loginpage1(),
-                          ),
-                        );
+                            context,
+                            PageTransition(
+                                child: Loginpage1(),
+                                type: PageTransitionType.rightToLeft));
                       }
                     },
                   );
