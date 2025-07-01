@@ -3,6 +3,8 @@ import 'package:flutter_application_7/constants/constants.dart';
 import 'package:flutter_application_7/pages/root.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
@@ -10,7 +12,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
 
     bool isLogin = true;
     void toggleForm() {
@@ -64,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           )),
                     ),
                     Form(
-                      key: _formKey,
+                      key: formKey,
                       child: Column(
                         children: [
                           login(
@@ -137,6 +139,7 @@ class _loginState extends State<login> {
 
   double _opacity = 0.0;
 
+  @override
   void initState() {
     super.initState();
     setState(() {

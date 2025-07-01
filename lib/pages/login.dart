@@ -29,7 +29,7 @@ class Loginpage1 extends StatelessWidget {
                   Navigator.push(
                       context,
                       PageTransition(
-                          child: LoginScreen(),
+                          child: const LoginScreen(),
                           type: PageTransitionType.rightToLeft));
                 },
                 child: Container(
@@ -60,7 +60,7 @@ class Loginpage1 extends StatelessWidget {
                   Navigator.push(
                       context,
                       PageTransition(
-                          child: LoginScreen(),
+                          child: const LoginScreen(),
                           type: PageTransitionType.rightToLeft));
                 },
                 child: const Text(

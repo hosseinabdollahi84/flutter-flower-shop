@@ -26,6 +26,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   page_transition: ^2.1.0
   animated_bottom_navigation_bar: ^1.2.0
+  mobile_scanner: ^3.0.0
+
   
 
 dev_dependencies:
@@ -73,6 +75,9 @@ flutter:
         - asset: assets/fonts/IranianSans.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+    - family: lale
+      fonts:
+        - asset: assets/fonts/lale.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

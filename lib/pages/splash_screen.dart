@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/constants/constants.dart';
 import 'package:flutter_application_7/pages/login.dart';
-import 'package:flutter_application_7/pages/login_page.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Homepage extends StatefulWidget {
@@ -50,7 +49,15 @@ class _HomepageState extends State<Homepage> {
         // ignore: prefer_const_literals_to_create_immutables
         actions: [
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                PageTransition(
+                  child: Loginpage1(),
+                  type: PageTransitionType.rightToLeft,
+                ),
+              );
+            },
             child: const Padding(
               padding: EdgeInsets.only(top: 14, right: 16),
               child: Text(
@@ -124,10 +131,12 @@ class _HomepageState extends State<Homepage> {
                         }
                       } else {
                         Navigator.pushReplacement(
-                            context,
-                            PageTransition(
-                                child: Loginpage1(),
-                                type: PageTransitionType.rightToLeft));
+                          context,
+                          PageTransition(
+                            child: Loginpage1(),
+                            type: PageTransitionType.rightToLeft,
+                          ),
+                        );
                       }
                     },
                   );
