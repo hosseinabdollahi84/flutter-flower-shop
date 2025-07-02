@@ -113,7 +113,7 @@ class Plant {
       rating: 4.4,
       humidity: 36,
       temperature: '15 - 18',
-      imageURL: 'assets/images/plant-five.png',
+      imageURL: 'assets/images/plant-two.png',
       isFavorated: false,
       decription:
           'این گیاه یکی از بهترین گیاهان است. در بیشتر مناطق جهان رشد می کند و می تواند حتی در سخت ترین شرایط آب و هوایی نیز زنده بماند.',

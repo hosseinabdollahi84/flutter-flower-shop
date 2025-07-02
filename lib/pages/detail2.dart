@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_7/constants/constants.dart';
 import 'package:flutter_application_7/models/plant.dart';
 
-class Detailpage extends StatefulWidget {
+class Detailpage1 extends StatefulWidget {
   final int plantid;
   final String imageUrl;
   final String heroTag;
 
-  const Detailpage(
+  const Detailpage1(
       {super.key,
       required this.imageUrl,
       required this.heroTag,
       required this.plantid});
 
   @override
-  State<Detailpage> createState() => _DetailpageState();
+  State<Detailpage1> createState() => _DetailpageState();
 }
 
-class _DetailpageState extends State<Detailpage> {
+class _DetailpageState extends State<Detailpage1> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -245,61 +245,6 @@ class _DetailpageState extends State<Detailpage> {
             ),
           ),
         ],
-      ),
-      floatingActionButton: SizedBox(
-        height: 50,
-        width: size.width * 0.9,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                boxShadow: const [
-                  BoxShadow(
-                    offset: Offset(0.0, 1.1),
-                    blurRadius: 5,
-                  ),
-                ],
-                color: Constants.primaryColor.withOpacity(0.9),
-                borderRadius: BorderRadius.circular(50),
-              ),
-              child: const Icon(
-                Icons.shopping_cart,
-                color: Colors.white,
-              ),
-            ),
-            const SizedBox(
-              width: 30,
-            ),
-            Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  boxShadow: const [
-                    BoxShadow(
-                      offset: Offset(0.0, 1.1),
-                      blurRadius: 6,
-                    ),
-                  ],
-                  color: Constants.primaryColor,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: const Center(
-                  child: Text(
-                    "افزودن به سبد خرید",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: 'lale',
-                      color: Colors.white,
-                      height: 1.3,
-                    ),
-                  ),
-                ),
-              ),
-            )
-          ],
-        ),
       ),
     );
   }
