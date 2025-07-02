@@ -119,6 +119,7 @@ class _HomepageState extends State<Homepage> {
             SizedBox(
               height: size.height * 0.3,
               child: ListView.builder(
+                physics: const BouncingScrollPhysics(),
                 reverse: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: _plantlist.length,
@@ -270,6 +271,7 @@ class _HomepageState extends State<Homepage> {
               ),
               height: size.height * 0.3,
               child: ListView.builder(
+                physics: const BouncingScrollPhysics(),
                 itemCount: _plantlist.length,
                 itemBuilder: (context, index) {
                   return NewplantWidget(plantlist: _plantlist, index: index);

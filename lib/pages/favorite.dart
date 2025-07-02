@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_7/constants/constants.dart';
 
 import 'package:flutter_application_7/models/plant.dart';
-import 'package:flutter_application_7/pages/detail2.dart';
+
 import 'package:flutter_application_7/pages/detail_page.dart';
 import 'package:flutter_application_7/pages/home_page.dart';
 
@@ -47,6 +47,7 @@ class _FavoritePageState extends State<FavoritePage> {
                 ),
                 height: size.height * 0.5,
                 child: ListView.builder(
+                  physics: const BouncingScrollPhysics(),
                   itemCount: widget.favoritedplant.length,
                   itemBuilder: (context, index) {
                     return NewplantWidget1(
@@ -79,7 +80,7 @@ class NewplantWidget1 extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (_) => Detailpage1(
+            builder: (_) => Detailpage(
               imageUrl: _plantlist[index].imageURL,
               heroTag: 'plantHero1${_plantlist[index].plantId}',
               plantid: _plantlist[index].plantId,
