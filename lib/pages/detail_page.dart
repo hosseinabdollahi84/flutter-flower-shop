@@ -18,10 +18,15 @@ class Detailpage extends StatefulWidget {
 }
 
 class _DetailpageState extends State<Detailpage> {
+  bool toggleIsselected(bool isSelected12) {
+    return !isSelected12;
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     List<Plant> plantList = Plant.plantList;
+
     return Scaffold(
       body: Stack(
         children: [
@@ -285,14 +290,24 @@ class _DetailpageState extends State<Detailpage> {
                   color: Constants.primaryColor,
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Center(
-                  child: Text(
-                    "افزودن به سبد خرید",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontFamily: 'lale',
-                      color: Colors.white,
-                      height: 1.3,
+                child: Center(
+                  child: InkResponse(
+                    onTap: () {
+                      setState(() {
+                        bool isSelected1 = toggleIsselected(
+                          plantList[widget.plantid].isSelected,
+                        );
+                        plantList[widget.plantid].isSelected = isSelected1;
+                      });
+                    },
+                    child: const Text(
+                      "افزودن به سبد خرید",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: 'lale',
+                        color: Colors.white,
+                        height: 1.3,
+                      ),
                     ),
                   ),
                 ),

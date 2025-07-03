@@ -105,7 +105,7 @@ class _RootpageState extends State<RootPage> {
           setState(() {
             bottimIndex = index;
             final List<Plant> favoritedPlants = Plant.getFavoritedPlants();
-            final List<Plant> cart = Plant.getFavoritedPlants();
+            final List<Plant> cart = Plant.addedToCartPlants();
             favorites = favoritedPlants.toSet().toList();
             mycart = cart.toSet().toSet().toList();
           });
