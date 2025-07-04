@@ -13,6 +13,10 @@ class Cartpage extends StatefulWidget {
 }
 
 class _CartpageState extends State<Cartpage> {
+  int getTotalPrice() {
+    return widget.mycart.fold(0, (sum, item) => sum + item.price);
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -81,7 +85,7 @@ class _CartpageState extends State<Cartpage> {
                                   width: 5,
                                 ),
                                 Text(
-                                  '33000'.farsinumber1,
+                                  getTotalPrice().toString().farsinumber1,
                                   style: const TextStyle(
                                     fontSize: 23,
                                     fontFamily: 'lale',
@@ -94,9 +98,10 @@ class _CartpageState extends State<Cartpage> {
                             const Text(
                               'جمع کل',
                               style: TextStyle(
-                                  fontFamily: 'lale',
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
+                                fontFamily: 'lale',
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
                             )
                           ],
                         ),

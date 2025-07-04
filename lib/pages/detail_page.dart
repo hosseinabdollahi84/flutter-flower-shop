@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/constants/constants.dart';
 import 'package:flutter_application_7/models/plant.dart';
+import 'package:flutter_application_7/pages/cart_page.dart';
 
 class Detailpage extends StatefulWidget {
   final int plantid;
   final String imageUrl;
   final String heroTag;
 
-  const Detailpage(
-      {super.key,
-      required this.imageUrl,
-      required this.heroTag,
-      required this.plantid});
+  const Detailpage({
+    super.key,
+    required this.imageUrl,
+    required this.heroTag,
+    required this.plantid,
+  });
 
   @override
   State<Detailpage> createState() => _DetailpageState();
 }
 
 class _DetailpageState extends State<Detailpage> {
+  int add = 0;
   bool toggleIsselected(bool isSelected12) {
     return !isSelected12;
   }
@@ -270,10 +273,27 @@ class _DetailpageState extends State<Detailpage> {
                 color: Constants.primaryColor.withOpacity(0.9),
                 borderRadius: BorderRadius.circular(50),
               ),
-              child: const Icon(
-                Icons.shopping_cart,
-                color: Colors.white,
-              ),
+              child: Stack(children: [
+                Positioned(
+                  left: 36,
+                  child: Text(
+                    '$add',
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    //.......................
+                  },
+                  icon: const Icon(
+                    Icons.shopping_cart,
+                    color: Colors.white,
+                  ),
+                ),
+              ]),
             ),
             const SizedBox(
               width: 30,
@@ -293,12 +313,46 @@ class _DetailpageState extends State<Detailpage> {
                 child: Center(
                   child: InkResponse(
                     onTap: () {
-                      setState(() {
-                        bool isSelected1 = toggleIsselected(
-                          plantList[widget.plantid].isSelected,
-                        );
-                        plantList[widget.plantid].isSelected = isSelected1;
-                      });
+                      setState(
+                        () {
+                          bool isSelected1 = toggleIsselected(
+                            plantList[widget.plantid].isSelected,
+                          );
+                          plantList[widget.plantid].isSelected = isSelected1;
+                          add = 1;
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              duration: const Duration(seconds: 3),
+                              behavior: SnackBarBehavior.floating,
+                              backgroundColor:
+                                  Constants.blackColors.withOpacity(0.7),
+                              content: const Row(
+                                textDirection: TextDirection.ltr,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      textDirection: TextDirection.rtl,
+                                      'گیاه با موفقیت انتخاب شد',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                        fontFamily: 'iransans',
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(width: 12),
+                                  Icon(
+                                    Icons.verified,
+                                    color: Colors.green,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                      ;
                     },
                     child: const Text(
                       "افزودن به سبد خرید",

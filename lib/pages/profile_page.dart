@@ -92,11 +92,11 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                   Options(
                     title: 'اطلاع رسانی‌ها',
-                    icon: Icons.person,
+                    icon: Icons.share,
                   ),
                   Options(
-                    title: 'شبکه‌های اجتمایی',
-                    icon: Icons.share,
+                    title: 'شبکه‌های اجتماعی',
+                    icon: Icons.sms_rounded,
                   ),
                   Options(
                     title: 'خروج',

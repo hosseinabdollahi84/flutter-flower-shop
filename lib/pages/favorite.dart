@@ -45,7 +45,7 @@ class _FavoritePageState extends State<FavoritePage> {
                   horizontal: 12,
                   vertical: 30,
                 ),
-                height: size.height * 0.5,
+                // height: size.height * 0.5,
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
                   itemCount: widget.favoritedplant.length,
