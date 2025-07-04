@@ -1,8 +1,9 @@
 # 🌸 Flutter Flower Shop
 
 <div align="center">
- <img src="assets/gifs/v1.gif" width="45%" height="200px" />
-<img src="assets/gifs/v2.gif" width="45%" height="200px" />
+ <img src="assets/gifs/v1.gif" width="30%" style="max-height:150px; height:auto;" />
+<img src="assets/gifs/v2.gif" width="30%" style="max-height:150px; height:auto;" />
+
 </div>
 
 ---
