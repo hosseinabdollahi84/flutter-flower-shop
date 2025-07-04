@@ -1,27 +1,47 @@
-# 🌸 Flutter Flower Shop App
+# 🌸 Flutter Flower Shop
 
 <div align="center">
-  <img src="assets/gifs/v1.gif" width="45%" />
-  <img src="assets/gifs/v2.gif" width="45%" />
+ <img src="assets/gifs/v1.gif" width="45%" height="200px" />
+<img src="assets/gifs/v2.gif" width="45%" height="200px" />
 </div>
 
 ---
 
-A minimal and beautiful flower shopping app built with **Flutter**.
+A clean and minimal **flower shopping app** built with **Flutter**, focused on UI/UX design and smooth user experience.
 
-This project demonstrates:
+---
 
-- 🌼 A clean shopping UI with a home page and cart page
-- ✨ Smooth navigation between screens using **Hero animations**
-- 🧭 Simple state management and routing
-- 📱 Responsive design, works on both mobile and web
-- 🎨 Custom widgets and organized folder structure
+## ✨ Key Features
 
-This app is ideal for Flutter beginners who want to practice:
+- 🌼 Browse a list of flowers with beautiful cards
+- 🛒 Add to cart functionality with dynamic UI
+- 💫 Smooth **Hero animations** between pages
+- 🧩 Modular widget-based architecture
 
-- Animations
-- Navigation
-- Layout building
-- Asset management
+---
 
+## 🧠 Why This Project?
+
+This app was built as a UI/UX-focused showcase to:
+
+- Practice **Hero animations** and screen transitions
+- Build a clean shopping experience without backend
+- Structure a scalable Flutter project with custom widgets
+- Polish layouting, theming, and responsive design
+
+---
+
+## 🛠 Technologies
+
+- Flutter
+- Dart
+- Google Fonts
+- Hero Animation
+- Stateless & Stateful Widgets
+
+---
+
+## 👤 Author
+
+Made with ❤️ by [hossein abddolahi]  
 ---
