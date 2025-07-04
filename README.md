@@ -1,8 +1,8 @@
 # 🌸 Flutter Flower Shop App
 
 <div align="center">
-  <img src="assets/gifs/home.gif" width="45%" />
-  <img src="assets/gifs/cart.gif" width="45%" />
+  <img src="assets/gifs/v1.gif" width="45%" />
+  <img src="assets/gifs/v2.gif" width="45%" />
 </div>
 
 ---
