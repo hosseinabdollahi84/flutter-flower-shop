@@ -1,16 +1,27 @@
-# flutter_application_7
+# 🌸 Flutter Flower Shop App
 
-A new Flutter project.
+<div align="center">
+  <img src="assets/gifs/home.gif" width="45%" />
+  <img src="assets/gifs/cart.gif" width="45%" />
+</div>
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+A minimal and beautiful flower shopping app built with **Flutter**.
 
-A few resources to get you started if this is your first Flutter project:
+This project demonstrates:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 🌼 A clean shopping UI with a home page and cart page
+- ✨ Smooth navigation between screens using **Hero animations**
+- 🧭 Simple state management and routing
+- 📱 Responsive design, works on both mobile and web
+- 🎨 Custom widgets and organized folder structure
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This app is ideal for Flutter beginners who want to practice:
+
+- Animations
+- Navigation
+- Layout building
+- Asset management
+
+---
